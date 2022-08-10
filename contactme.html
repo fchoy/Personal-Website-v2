@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="icon-and-name">
+            <img class="header-img" src="/Images/globe-removed-bg.png" />
+            <h2 class="header-text">Felix Choy</h2>
+        </div>
+
+        <nav class="header-nav">
+            <a class="header-nav-link" target="_self" href="index.html">Home</a>
+            <a class="header-nav-link" target="_self" href="skills.html">Skills</a>
+            <a class="header-nav-link" target="_self" href="portfolio.html">Portfolio</a>
+        </nav>
+    </header>
+
+    <div class="contact-me-form-div">
+        <!--<h2>Contact Me</h2>-->
+        <form name="contactMe" action="contactme.html" class="contact-me-form">
+            <div class="form-element-div">
+                <div class="name-input-div">
+                    <label for="name-input" class="name-input-label">Name  </label>
+                    <input id="name-input" placeholder="For Example : &quot;Tony Stark&quot;" type="text" name="name-input" class="name-input" required/>
+                </div>
+
+                <div class="subject-input-div">
+                    <label for="subject-input" class="subject-input-label">Subject  </label>
+                    <input placeholder="For Example : &quot;Rabid dog on the loose&quot;"type="text" name="subject-input" class="subject-input" />
+                </div>
+
+                <div class="message-input-div">
+                    <label for="message-input" class="message-input-label">Message  </label>
+                    <textarea id="message-input" placeholder="For Example : &quot;I love you.&quot;" name="message-input" class="message-input" required></textarea>
+                </div>
+
+                <div class="submit-button-div">
+                    <p class="submit-text" id="submit-text"></p>
+                    <button type="submit" onclick="submitMessage();" class="form-submit-button" id="form-submit-button">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

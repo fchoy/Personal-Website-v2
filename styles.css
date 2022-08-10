@@ -1,0 +1,1198 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    display : flex;
+    flex-direction: column;
+    background : url(/Images/gray\ background.avif)
+}
+
+/*Keyframes for Animations*/
+@keyframes fadeInAnimation {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+
+/*****Header Section*****/
+.page-header{
+    display : flex;
+    flex-direction : row;
+    height : 75px;
+    align-items : center; /*Center all divs in header vertically*/
+    animation : fadeInAnimation ease 2s;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0ms;
+}
+
+.icon-and-name{
+    display : flex;
+    flex-direction : row; 
+    align-items : center;
+    width : 60%;
+}
+
+.header-img{
+    padding-left : 250px;
+    padding-right : 15px;
+    width : 40px;
+    height : 40px;
+}
+
+.header-text{
+    font-family : Gulzar;
+    font-size : 30px;
+    padding-top : 12px;
+}
+
+.header-nav{
+    justify-content: center;
+    text-align : center;
+    width : 50%;
+    padding-right : 25px;
+    padding-top : 12px;
+}
+
+.header-nav-link{
+    font-family : Gulzar;
+    color : black;
+    margin-right : 200px; /*Changed padding-right->margin-right, fixed width issues*/
+    text-decoration: none;
+    font-size : 20px;
+    font-weight : 500;
+}
+
+/*****Intro Section*****/
+.body-intro{
+    height : calc(100vh - 79px); 
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.5s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-img{
+    width : 350px;
+    height : 450px;
+    border-radius: 50%;
+    max-width : 50%;
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.75s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.body-intro-text-div{
+    display : flex;
+    flex-direction: column;
+    margin-left : 30px;
+}
+
+.body-intro-text1{
+    font-size: 40px;
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.85s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-text2-div{
+    padding-top : 30px;
+    margin : 0 auto;
+}
+
+.body-intro-text2{
+    font-size : 24px;
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.95s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 0.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-text3-div{
+    padding-top : 30px;
+    margin : 0 auto;
+}
+
+.body-intro-text3{
+    font-size : 36px;
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.05s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 1.0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-icons{
+    padding-top : 30px;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.body-intro-link-linkedin{
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.15s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 1.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-linkedin-img{
+    width : 50px;
+    height : auto;
+    background-color: white;
+    mix-blend-mode: multiply;
+}
+
+.body-intro-link-github{
+    opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.25s.*/
+    animation : fadeInAnimation ease 2s;
+    animation-delay : 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.body-intro-github-img{
+    width : 55px;
+    height : auto;
+}
+
+/*--------------------------------------------------------------------- Skills.html CSS ---------------------------------------------------------------------*/
+.relevant-courses-and-body-skills-div{
+    display : flex;
+    flex-direction : column;
+}
+
+.body-skills{
+    display : flex;
+    flex-direction : row;
+    height : calc(47vh); /*531.562px height*/
+    margin : auto 90px;
+}
+
+.education-div{
+    display : flex;
+    flex-direction : column;
+    width : 600px;
+    height : 400px;
+    align-items : center;
+    justify-content: center;
+    border-right : solid 2px black;
+    border-left : 2px solid black;
+    animation : fadeInAnimation ease 2s; /*Must have animation on div or else border doesn't fade in.*/
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.7s;
+    
+}
+
+.education-div-header, .programming-language-header, .web-tech-header{
+    font-size : 45px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    padding-bottom : 10px;  
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.7s;
+}
+
+.education-text1{
+    font-size : 28px;
+    padding-bottom : 12px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.75s;
+}
+
+.education-text2{
+    font-size : 23px;
+    padding-bottom : 14px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.education-text3{
+    font-size : 18px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.programming-languages-border-div{ /*Div used to make the right border 400px instead of the 375px below.*/
+    height : 400px;
+    border-right : 2px solid black;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.7s;
+}
+
+.programming-languages-div{
+    display : flex;
+    flex-direction : column;
+    width : 600px;
+    height : 375px;
+    align-items : center;
+    justify-content: center;
+}
+
+.programming-languages-li1{
+    font-size : 24px;
+    padding-bottom : 11px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.75s;
+}
+
+.programming-languages-li2{
+    font-size : 24px;
+    padding-bottom : 11px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.web-tech-div{
+    display : flex;
+    flex-direction : column;
+    width : 600px;
+    height : 400px;
+    align-items : center;
+    justify-content: center;
+    border-right : solid 2px black;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.7s;
+}
+
+.web-tech-li1{
+    font-size : 20px;
+    padding-bottom : 11px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.75s;
+}
+
+.web-tech-li2{
+    font-size : 20px;
+    padding-bottom : 11px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.web-tech-li3{
+    font-size : 20px;
+    padding-bottom : 11px;
+    animation : fadeInAnimation ease 2s;
+    opacity: 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.85s;
+}
+
+.skills-hr{
+    height : 20px;
+    border-left : 0px; /*Erases weird downward border on left side for margin increase*/
+    width : 92%;
+    margin : 0 auto;
+    border-top : 2px solid black;
+    border-bottom : 0px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.95s;
+}
+
+.relevant-courses-div{
+    margin : 0 auto;
+    border-left : 2px solid rgb(122, 17, 17);
+    border-right : 2px solid rgb(122, 17, 17);
+    padding-left : 132px;
+    padding-right : 132px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1s;
+}
+
+.relevant-courses-header{
+    font-size : 45px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    padding-bottom : 10px; 
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1s;
+}
+
+.relevant-courses-ul{
+    width : 80%;
+    margin : 0 auto; /*10% left and right margin spacing*/
+}
+
+.relevant-courses-li1{
+    font-size : 20px;
+    padding-bottom: 10px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1.05s;
+}
+
+.relevant-courses-li2{
+    font-size : 20px;
+    padding-bottom: 10px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1.07s;
+}
+
+.relevant-courses-li3{
+    font-size : 20px;
+    padding-bottom: 10px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1.09s;
+}
+
+.relevant-courses-li4{
+    font-size : 20px;
+    padding-bottom: 10px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1.1s;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------- Portfolio.html CSS ---------------------------------------------------------------------*/
+/*TO DO NEXT: Add More personal projects (C++ Projects) to page. Add animations to this page. */
+
+.body-portfolio{
+    height : calc(100vh - 150px); 
+    width : 1500px;
+    margin : 0px auto;
+    margin-top : 40px;
+    background-color : rgb(228, 226, 226);
+    mix-blend-mode: multiply;
+    display : flex;
+    flex-direction: column;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.5s;
+}
+
+.body-portfolio-heading1{
+    font-size : 40px;
+    width : max-content; /*Make width the size of the text.*/
+    margin : 0 auto;
+    margin-top : 20px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.6s;
+}
+
+.table-div{
+}
+
+.portfolio-table{
+    width : 100%;
+}
+
+.portfolio-table-row{
+    display : flex;
+    flex-direction: row;
+    width : 100%;
+    height : 350px;
+}
+
+.portfolio-table-data1{ /*First row, top left project*/
+    display : flex;
+    flex-direction : column;
+    margin : auto auto; /*25px margin top and bottom, and same margin for left and right (allows for centering vertically and horizontally in div)*/
+    text-align : center;
+    width : 400px;
+    height : 300px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.65s;
+}
+
+.portfolio-table-data2{
+    display : flex;
+    flex-direction : column;
+    margin : auto auto; /*25px margin top and bottom, and same margin for left and right (allows for centering vertically and horizontally in div)*/
+    text-align : center;
+    width : 400px;
+    height : 300px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.portfolio-table-data3{
+    display : flex;
+    flex-direction : column;
+    margin : auto auto; /*25px margin top and bottom, and same margin for left and right (allows for centering vertically and horizontally in div)*/
+    text-align : center;
+    width : 400px;
+    height : 300px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.95s;
+}
+
+.portfolio-table-data4{
+    display : flex;
+    flex-direction : column;
+    margin : auto auto; /*25px margin top and bottom, and same margin for left and right (allows for centering vertically and horizontally in div)*/
+    text-align : center;
+    width : 400px;
+    height : 300px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 1.05s;
+}
+
+.portfolio-table-data1:hover, .portfolio-table-data2:hover, .portfolio-table-data3:hover, .portfolio-table-data4:hover{ /*Changes background of container to be slightly darker when hovered over.*/
+    background-color : rgb(221, 221, 221);
+    mix-blend-mode: multiply;
+}
+
+.portfolio-table-data-link{
+    text-decoration : none;
+    color : black;
+    margin : auto auto; /*Centers vertically and horizontally in container*/
+}
+
+.portfolio-table-data-img{
+    height : 200px;
+    width : 350px;
+    margin-bottom : 10px;
+}
+
+.portfolio-table-data-title{
+    text-align : center;  
+    margin-bottom : 10px;
+
+}
+
+.portfolio-table-data-description{
+    font-size : 15px;
+    line-height : 25px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------- contactme.html CSS ---------------------------------------------------------------------*/
+
+.contact-me-form-div{
+    height : 600px;
+    width : 1200px;
+    margin : 0 auto;
+    margin-top : 40px;
+    background-color : rgb(228, 226, 226);
+    mix-blend-mode: multiply;
+    display : flex; /*Elements inside div is flexed (HTML form)*/
+    align-items : center; /*Align the items vertically*/
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.6s;
+}
+
+.contact-me-form{
+    width : 600px;
+    height : 400px;
+    margin : 0 auto; /*Align the form vertically*/
+    display : flex;
+    border : 1px outset gray;
+    border-radius: 10%;
+}
+
+.form-element-div{ /*Div used to put form elements in flexbox, and horizontally align them.*/
+    display : flex;
+    flex-direction : column;
+    margin : 27px auto;
+    height : 350px;
+}
+
+.name-input-div{
+    display : flex;
+    flex-direction: row;
+    width : 500px;
+    height : 75px;
+    align-items : center;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.7s;
+    
+}
+
+.name-input-label{
+    font-size : 25px;
+    width : 100px;
+}
+
+.name-input-label:hover{
+    cursor: text;
+}
+
+
+.name-input{
+    width : 400px;
+    height : 30px;
+    font-size : 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subject-input-div{
+    display : flex;
+    flex-direction: row;
+    width : 500px;
+    height : 75px;
+    align-items : center;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.75s;
+}
+
+.subject-input-label{
+    font-size : 25px;
+    width : 100px;
+}
+
+.subject-input-label:hover{
+    cursor : text;
+}
+
+.subject-input{
+    width : 400px;
+    height : 30px;
+    font-size : 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.message-input-div{
+    display : flex;
+    flex-direction : row;
+    width : 500px;
+    height : 100px;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.8s;
+}
+
+.message-input-label{
+    font-size : 25px;
+    width : 100px;
+}
+
+.message-input-label:hover{
+    cursor : text;
+}
+
+.message-input{
+    /*vertical-align: top; Aligns the label with the top of the text area.*/
+    width : 400px;
+    height : 100px;
+    font-size : 20px;
+    padding-left : 2px;
+    padding-right : 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit-button-div{
+    display : flex;
+    flex-direction: row;
+    justify-content: right;
+    width : 100%;
+    animation : fadeInAnimation ease 2s;
+    opacity : 0;
+    animation-iteration-count: 1; /*Plays only once per body load*/
+    animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+    animation-delay: 0.85s;
+}
+
+.submit-text{
+    font-size : 18px;
+    height : fit-content;
+    margin : auto 0;
+    padding-right : 25px;
+}
+
+.form-submit-button{
+    width : 100px;
+    height : 40px;
+    background-color: rgb(247, 242, 242);
+    border : 2px outset rgb(212, 212, 212);
+    border-radius : 10%;
+}
+
+.form-submit-button:hover{
+    width : 100px;
+    height : 40px;
+    background-color: rgb(221, 221, 221);
+    cursor : pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*****Applicable to width 0px - 500px w/ heights between 0 - 700px *****/
+@media screen and (max-width : 500px) and (max-height : 700px){
+    /*****Header Section*****/
+    .page-header{
+        display : flex;
+        flex-direction : column;
+        height : auto;
+        align-items : center; /*Center all divs in header vertically*/
+        animation : fadeInAnimation ease 2s;
+        animation-iteration-count: 1; /*Plays only once per body load*/
+        animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+        animation-delay: 0ms;
+    }
+
+    .icon-and-name{
+        display : flex;
+        flex-direction : row; 
+        width : 100%;
+        justify-content: center;
+    }
+
+    .header-img{
+        padding-left : 10px;
+        padding-right : 5px;
+        width : 40px;
+        height : 40px;
+    }
+
+    .header-text{
+        font-family : Gulzar;
+        font-size :30px;
+        padding-top : 5px;
+    }
+
+    .header-nav{
+        display : flex;
+        flex-direction: column;
+        height : auto;
+        width : 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right : 0px;
+        padding-top : 10px;
+    }
+
+    .header-nav-link{
+        font-family : Gulzar;
+        color : black;
+        margin-right : 0px; /*Changed padding-right->margin-right, fixed width issues*/
+        text-decoration: none;
+        font-size : 20px;
+        font-weight : 500;
+    }
+
+    /*****Intro Section*****/
+    .body-intro{
+        height : auto; 
+        padding-top : 50px;
+        display : flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.5s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-img{
+        width : 150px;
+        height : 200px;
+        border-radius: 50%;
+        max-width : 50%;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.75s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.65s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text-div{
+        display : flex;
+        flex-direction: column;
+        margin-left : 7px;
+    }
+
+    .body-intro-text1{
+        font-size: 15px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.85s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.85s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text2-div{
+        padding-top : 20px;
+        width : auto;
+        align-items : center;
+    }
+
+    .body-intro-text2{
+        font-size : 12px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.95s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.95s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text3-div{
+        padding-top : 20px;
+        margin : 0 auto;
+    }
+    
+    .body-intro-text3{
+        font-size : 15px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.05s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.05s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-icons{
+        padding-top : 20px;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .body-intro-link-linkedin{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.15s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.15s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-linkedin-img{
+        width : 50px;
+        height : auto;
+        background-color: white;
+        mix-blend-mode: multiply;
+    }
+    
+    .body-intro-link-github{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.25s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-github-img{
+        width : 55px;
+        height : auto;
+    }
+    
+}
+
+/*****Applicable to width 0px - 500px w/ heights between 701px - 900px *****/
+@media screen and (max-width : 500px) and (max-height : 900px) and (min-height : 701px){
+    /*****Header Section*****/
+    .page-header{
+        display : flex;
+        flex-direction : column;
+        height : auto;
+        align-items : center; /*Center all divs in header vertically*/
+        animation : fadeInAnimation ease 2s;
+        animation-iteration-count: 1; /*Plays only once per body load*/
+        animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+        animation-delay: 0ms;
+    }
+
+    .icon-and-name{
+        display : flex;
+        flex-direction : row; 
+        width : 100%;
+        justify-content: center;
+    }
+
+    .header-img{
+        padding-left : 10px;
+        padding-right : 5px;
+        width : 40px;
+        height : 40px;
+    }
+
+    .header-text{
+        font-family : Gulzar;
+        font-size :30px;
+        padding-top : 5px;
+    }
+
+    .header-nav{
+        display : flex;
+        flex-direction: column;
+        height : auto;
+        width : 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right : 0px;
+        padding-top : 10px;
+    }
+
+    .header-nav-link{
+        font-family : Gulzar;
+        color : black;
+        margin-right : 0px; /*Changed padding-right->margin-right, fixed width issues*/
+        text-decoration: none;
+        font-size : 20px;
+        font-weight : 500;
+    }
+
+    /*****Intro Section*****/
+    .body-intro{
+        height : auto; 
+        padding-top : 50px;
+        display : flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.5s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-img{
+        width : 150px;
+        height : 200px;
+        border-radius: 50%;
+        max-width : 50%;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.75s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.65s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text-div{
+        display : flex;
+        flex-direction: column;
+        margin-left : 8px;
+        margin-top : 20px;
+    }
+
+    .body-intro-text1{
+        font-size: 18px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.85s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.85s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text2-div{
+        padding-top : 30px;
+        width : auto;
+        align-items : center;
+    }
+
+    .body-intro-text2{
+        font-size : 15px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.95s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.95s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text3-div{
+        padding-top : 30px;
+        margin : 0 auto;
+    }
+    
+    .body-intro-text3{
+        font-size : 18px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.05s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.05s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-icons{
+        padding-top : 20px;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .body-intro-link-linkedin{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.15s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.15s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-linkedin-img{
+        width : 50px;
+        height : auto;
+        background-color: white;
+        mix-blend-mode: multiply;
+    }
+    
+    .body-intro-link-github{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.25s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-github-img{
+        width : 55px;
+        height : auto;
+    }
+    
+}
+
+/*****Applicable to width 500px - 600px*****/
+@media screen and (max-width : 600px) and (min-width : 500px){
+    /*****Header Section*****/
+    .page-header{
+        display : flex;
+        flex-direction : column;
+        height : auto;
+        align-items : center; /*Center all divs in header vertically*/
+        animation : fadeInAnimation ease 2s;
+        animation-iteration-count: 1; /*Plays only once per body load*/
+        animation-fill-mode: forwards; /*Plays the animation in a forward time type of way, not reversed*/
+        animation-delay: 0ms;
+    }
+
+    .icon-and-name{
+        display : flex;
+        flex-direction : row; 
+        width : 100%;
+        justify-content: center;
+    }
+
+    .header-img{
+        padding-left : 10px;
+        padding-right : 5px;
+        width : 40px;
+        height : 40px;
+    }
+
+    .header-text{
+        font-family : Gulzar;
+        font-size :30px;
+        padding-top : 5px;
+    }
+
+    .header-nav{
+        display : flex;
+        flex-direction: column;
+        height : auto;
+        width : 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right : 0px;
+        padding-top : 10px;
+    }
+
+    .header-nav-link{
+        font-family : Gulzar;
+        color : black;
+        margin-right : 0px; /*Changed padding-right->margin-right, fixed width issues*/
+        text-decoration: none;
+        font-size : 20px;
+        font-weight : 500;
+    }
+
+    /*****Intro Section*****/
+    .body-intro{
+        height : calc(100vh - 500px); /*100vh - (height of the header + 10px)*/
+        display : flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.5s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-img{
+        width : 200px;
+        height : 250px;
+        border-radius: 50%;
+        max-width : 50%;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.75s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.65s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text-div{
+        display : flex;
+        flex-direction: column;
+        margin-left : 10px;
+    }
+
+    .body-intro-text1{
+        font-size: 24px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.85s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.85s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text2-div{
+        padding-top : 30px;
+        width : auto;
+        align-items : center;
+    }
+
+    .body-intro-text2{
+        font-size : 17px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 0.95s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 0.95s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-text3-div{
+        padding-top : 30px;
+        margin : 0 auto;
+    }
+    
+    .body-intro-text3{
+        font-size : 25px;
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.05s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.05s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .body-intro-icons{
+        padding-top : 30px;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .body-intro-link-linkedin{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.15s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.15s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-linkedin-img{
+        width : 50px;
+        height : auto;
+        background-color: white;
+        mix-blend-mode: multiply;
+    }
+    
+    .body-intro-link-github{
+        opacity : 0; /*Start with opacity 0, then ease in using keyframe after 1.25s.*/
+        animation : fadeInAnimation ease 2s;
+        animation-delay : 1.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .body-intro-github-img{
+        width : 55px;
+        height : auto;
+    }
+    
+}
